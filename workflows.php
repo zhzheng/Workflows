@@ -37,7 +37,12 @@ class Workflows {
 		if ( !is_null( $bundleid ) ):
 			$this->bundle = $bundleid;
 		endif;
-
+        /*
+         * if file not exist in MacOs Monterey
+         * create it by yourself
+         * mkdir '/Library/Caces/com.runningwithcrayons.Alfred-2/Workflow Data/'
+         * mkdir '/Library/Application Support/Alfred 2/Workflow Data/'
+         */
 		$this->cache = $this->home. "/Library/Caches/com.runningwithcrayons.Alfred-2/Workflow Data/".$this->bundle;
 		$this->data  = $this->home. "/Library/Application Support/Alfred 2/Workflow Data/".$this->bundle;
 
