@@ -202,7 +202,7 @@ class Workflows {
 					if ( $b[$key] === null || $b[$key] === '' ):
 						continue;
 					else:
-						$c->addAttribute( 'autocomplete', $b[$key] );
+						$c->addAttribute( 'autocomplete', $b[$key] == null ? '' : $b[$key] );
 					endif;
 				elseif ( $key == 'icon' ):
 					if ( substr( $b[$key], 0, 9 ) == 'fileicon:' ):
